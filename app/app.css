@@ -1,0 +1,343 @@
+.font {
+  font-family: 'Lato', sans-serif;
+}
+.font2 {
+  font-family: 'Noticia Text', serif;
+}
+body {
+  font-family: 'Lato', sans-serif;
+}
+/* SLIDER ----------------------- */
+.slider img {
+  width: 100%;
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  font-size: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin: -22px 10px 0 10px;
+  cursor: pointer;
+}
+.slick-arrow:focus {
+  outline: none;
+}
+.slick-arrow:after {
+  font: normal normal normal 44px/1 FontAwesome;
+}
+.slick-arrow.slick-prev {
+  left: 0;
+}
+.slick-arrow.slick-prev:after {
+  content: "\f053";
+}
+.slick-arrow.slick-next {
+  right: 0;
+}
+.slick-arrow.slick-next:after {
+  content: "\f054";
+}
+.v-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.v-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-family: 'Noticia Text', serif;
+}
+/* SITE ########################################################## */
+.topbar {
+  background: #011829;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 4px 0;
+}
+.topbar a {
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .topbar {
+    display: none;
+  }
+}
+.navbar {
+  padding: 30px 0;
+  background: #fff;
+  z-index: 99 !important;
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    padding: 0;
+  }
+}
+.navbar a {
+  color: #2F6DA1;
+  font-weight: bold;
+}
+.navbar a.is-active,
+.navbar a:hover {
+  color: #011829;
+  background: transparent;
+}
+.navbar .navbar-brand {
+  font-family: 'Noticia Text', serif;
+}
+.navbar .navbar-brand a {
+  color: #011829;
+}
+.navbar .navbar-brand a span {
+  margin-left: 10px;
+  font-size: 1.4em;
+}
+.navbar .navbar-brand a.is-active {
+  background: transparent;
+}
+.navbar .navbar-brand a:hover {
+  color: #011829;
+}
+.navbar .navbar a.is-active {
+  background: transparent;
+}
+#inicio #soluc {
+  min-height: 800px;
+  color: #fff;
+  background: rgba(0, 48, 91, 0.7);
+}
+#inicio #soluc .title,
+#inicio #soluc .subtitle {
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  #inicio #soluc .title {
+    font-size: 1.6em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #inicio #soluc {
+    min-height: 400px;
+  }
+}
+#inicio h2 {
+  background: rgba(1, 24, 41, 0.8);
+  color: #fff;
+  padding: 20px;
+  width: 60%;
+  font-style: italic;
+  line-height: 1;
+}
+@media only screen and (max-width: 768px) {
+  #inicio h2 {
+    width: 100%;
+    text-align: center;
+  }
+}
+#soluciones {
+  margin-bottom: .75rem;
+}
+#soluciones #about {
+  background: #F3F3F3;
+  padding: 180px 0;
+}
+@media only screen and (max-width: 768px) {
+  #soluciones #about {
+    padding: 20px;
+  }
+}
+#soluciones #about .card {
+  background: #011829;
+  color: #fff;
+  text-align: center;
+}
+#soluciones #about .card .title {
+  color: #fff;
+}
+#soluciones #about figure {
+  padding: 10px;
+}
+#soluciones .column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#soluciones .media {
+  padding: 40px;
+}
+@media only screen and (max-width: 768px) {
+  #soluciones .media {
+    padding: 10px;
+    width: 100%;
+  }
+}
+#soluciones .media .media-left {
+  color: #2F6DA1;
+  font-size: 3em;
+  padding: 20px;
+}
+@media only screen and (max-width: 768px) {
+  #soluciones .media .media-left {
+    font-size: 1em;
+    padding: 5px;
+  }
+}
+#soluciones .media .media-content .title {
+  color: #2F6DA1;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+#soluciones .media .media-content ul {
+  list-style: square;
+  list-style-position: inside;
+}
+#vision {
+  background: #011829;
+  padding: 180px 0;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  #vision {
+    padding: 40px 0;
+  }
+}
+#vision i.fa {
+  font-size: 2em;
+}
+#vision .title,
+#vision p {
+  color: #fff;
+}
+#vision p {
+  font-size: 1.4em;
+}
+@media only screen and (max-width: 768px) {
+  #vision p {
+    font-size: 1.1em;
+    margin: 20px;
+  }
+}
+#equipo {
+  background-image: url(img/roday-equipo.jpg);
+  background-size: cover;
+  background-position: top center;
+  padding: 80px 0 120px 0;
+  color: #fff;
+  margin-bottom: .75rem;
+}
+#equipo i.fa {
+  font-size: 2em;
+}
+#equipo .title,
+#equipo p,
+#equipo ul {
+  color: #fff;
+}
+#equipo .box {
+  border: none;
+  border-radius: 0;
+  background: rgba(0, 48, 91, 0.9);
+}
+#equipo p {
+  font-size: 1.2em;
+}
+@media only screen and (max-width: 768px) {
+  #equipo p {
+    font-size: 1.1em;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #equipo ul {
+    padding: 0;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #equipo .column {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+#contacto i.fa {
+  font-size: 2em;
+}
+#contacto #rodaycontacto {
+  padding: 180px 0;
+  background-image: url(img/roday-contactanos.jpg);
+  background-size: cover;
+  color: #fff;
+  line-height: 1;
+}
+@media only screen and (max-width: 768px) {
+  #contacto #rodaycontacto {
+    padding: 40px 0;
+  }
+}
+#contacto #rodaycontactus {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+@media only screen and (max-width: 768px) {
+  #contacto #rodaycontactus {
+    padding: 60px 20px;
+  }
+}
+#contacto #rodaycontactus p,
+#contacto #rodaycontactus a {
+  color: #011829;
+}
+#contacto #rodaycontactus a:hover {
+  color: #2F6DA1;
+}
+#contacto #rodaycontactus .is-outlined {
+  border-color: #2F6DA1;
+}
+#contacto #rodaycontactus .is-outlined:hover {
+  color: #fff;
+  background: #2F6DA1;
+}
+#contacto #rodaycontactus .media-left i {
+  font-size: 1.2em;
+  color: #cbcbcb;
+}
+#contacto form .button.is-primary {
+  background: #2F6DA1;
+}
+#contacto .notification {
+  display: none;
+}
+footer {
+  margin-top: .75rem;
+  background: #011829;
+}
+footer .title {
+  color: #fff;
+  font-size: 1.2em;
+}
+footer p {
+  color: #ffffff;
+  font-size: 0.8em;
+}
+footer a.navbar-item {
+  color: #fff;
+  padding: 10px;
+  font-size: 0.8em;
+}
+footer a.navbar-item.is-active {
+  color: #2F6DA1;
+}
+footer .footer-logo img {
+  max-width: 40px;
+}
+footer .goup {
+  color: #fff;
+  font-size: 2em;
+}
+/*# sourceMappingURL=app.css.map */

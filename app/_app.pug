@@ -1,0 +1,85 @@
+mixin head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css")
+  link(rel="stylesheet", href="//use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous")
+  link(rel="stylesheet", href="//unpkg.com/slick-carousel@1.8.1/slick/slick.css")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+  link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Lato|Noticia+Text")
+  link(rel="stylesheet" href="app/app.css")
+    
+    
+    
+
+mixin scripts
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js")
+  script(src="app/app.js")
+
+
+
+mixin navigation(url)
+  if url
+    - absolute = "index.html"
+  else
+    - absolute = ""
+  .navbar(role="navigation")
+    .container
+      .navbar-brand
+        a(href="#inicio").navbar-item.has-text-centered
+          img(src="app/img/roday-y-asociados.png", alt="Roday & Asociados")
+          span  RODAY & ASOCIADOS
+        .navbar-burger.burger
+          span
+          span
+          span
+      .navbar-menu#menu
+        .navbar-end
+          +navitems(absolute)
+            
+
+mixin navitems(absolute)
+
+  a(href=absolute+"#inicio").navbar-item INICIO
+  a(href=absolute+"#soluciones").navbar-item SOLUCIONES
+  a(href=absolute+"#vision").navbar-item VISIÓN
+  a(href=absolute+"#equipo").navbar-item EQUIPO
+  a(href=absolute+"#contacto").navbar-item CONTACTO
+  
+mixin socialnetworks
+  .socialnetworks.columns.is-mobile.has-text-centered
+    a(href="https://www.facebook.com/rodayasociados/" target="_blank").column.fb: i.fab.fa-facebook-square
+    a(href="https://ie.linkedin.com/company/roday-&-asociados" target="_blank").column.tw: i.fab.fa-linkedin
+  
+mixin topbar
+  .topbar: .container: .level
+    .level-left.animated.fadeInLeft
+      .level-item
+        | #[span RODAY & ASOCIADOS S. de R.L. de C.V. ]
+    .level-right
+      a(href="tel:35476828").level-item +52(55) 3547 - 6828
+      a(href="mailto:contacto@rodayasociados.com.mx").level-item contacto@rodayasociados.com.mx
+      +socialnetworks
+
+
+mixin footer
+  footer
+    .section
+      .container
+        .columns.v-center
+          .column.v-center
+            a(href="#inicio").footer-logo: img(src="app/img/roday-y-asociados.png", alt="Roday & Asociados")
+          //.column
+            .title Empresa
+            p  Somos una Firma de Abogados autorizados legalmente para el ejercicio de distintas Ramas del Derecho, con sede en la Ciudad de México y con la suficiente experiencia profesional para brindarle los servicios jurídicos que usted y su empresa requieren en las áreas que nuestro despacho ofrece.
+        .columns
+          .column
+            .v-center
+              +navitems("")
+        .columns
+          .column.has-text-right
+            a(href="#inicio").goup: i.fas.fa-angle-up

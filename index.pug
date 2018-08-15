@@ -1,0 +1,153 @@
+include app/_app
+doctype html
+html(lang="es")
+  head
+    +head
+    title Sitio
+    meta(name="description" content="")
+  body
+    +topbar
+    +navigation(false)
+  
+    #inicio
+      
+      .columns
+        .column#soluc.has-text-centered.v-center
+          .section
+            h1.title.is-1 SOLUCIONES INMOBILIARIAS
+            .subtitle PARTICULARES - COMERCIALES
+        .column.v-bottom
+          h2.is-size-4 Abogados especialistas<br>en bienes raíces...
+      //.slider
+        div: img(src="app/img/roday-y-asociados-abogados-especialistas.jpg")
+        div: img(src="app/img/roday-y-asociados-inmobiliarias.jpg")
+        div: img(src="app/img/roday-y-asociados-soluciones.jpg")
+    
+    section#soluciones
+      
+      .columns
+        .column#about
+          .columns.is-centered: .column.is-half
+            .card
+              .card-content: .title SOLUCIONES
+              .card-image
+                figure.image: img(src="app/img/roday-soluciones.jpg", alt="Contamos con todos los recursos para ofrecerte los mejores resultados")
+              hr
+              .card-content
+                .content
+                  p Contamos con todos los recursos para ofrecerte los mejores resultados
+        .column
+          .media.v-center
+            .media-left: i.fa.fa-user-tie
+            .media-content
+              .title LEGALES
+              ul
+                li Juicios sobre la Propiedad
+                li Juicios Reivindicatorios 
+                li Juicios Sucesorios
+                li Juicios Hipotecarios
+                li Remates Judiciales
+          .media.v-center
+            .media-left: i.fa.fa-briefcase
+            .media-content
+              .title ADMINISTRATIVAS
+              ul
+                li Regularización de inmuebles
+                li Administración de Arrendamientos
+                li Avalúos de inmuebles
+                li Corretaje y Promoción de inmuebles
+                li Escrituraciones
+    
+    section#vision
+      .container
+        .columns.is-centered
+          .column.is-two-thirds.has-text-centered
+            .title NUESTRA VISIÓN
+            i.fa.fa-balance-scale
+            hr
+            .content
+              p Nuestra visión es convertirnos en una firma con los recursos humanos, profesionales y tecnológicos para regularizar toda clase de incidentes que se presentan en los bienes raices, actuando en todo momento con profesionalismo, experiencia y ética, para así proporcionarle las mejores condiciones a sus inmuebles para uso, compra, venta o arrendamiento.
+    
+
+
+    section#equipo
+      .container
+        .columns
+          .column.is-half
+            .has-text-centered
+              .title NUESTRO EQUIPO
+              i.fa.fa-users
+              hr
+            .box: .content
+              p Para lograr nuestro objeto, tenemos como asociados a ABOGADOS en distintas áreas de Derecho, así como:
+              .columns
+                .column
+                  ul
+                    li Gestores
+                    li Valuadores
+                    li Notarios
+                .column
+                  ul
+                    li Corredores
+                    li Peritos
+    
+
+    section#contacto
+      .columns
+        .column#rodaycontacto.v-center
+          .has-text-centered
+            img(src="app/img/roday-y-asociados.png", alt="Roday Asociados S. de R.L. de C.V.")
+            p.is-size-3 Roday &
+            p.is-size-3 Asociados
+            p.is-size-5 S. de R.L. de C.V.
+
+        .column#rodaycontactus.is-half
+          .columns.is-centered: .column.is-two-thirds
+            .level
+              .level-item: .title CONTACTO
+              .level-item: +socialnetworks
+            hr
+            .media
+              .media-left: i.fa.fa-marker
+              .media-content
+                p Av. Paseo de la Reforma  300 piso 9  Col. Juárez - CDMX   06600
+              .media-right: a(href="https://goo.gl/maps/J4aXhHRXDG82" target="_blank").is-pulled-right.button.is-small.is-outlined.is-primary: span:icon: i.fas.fa-map-marker-alt
+
+            .media
+              .media-left: .level-item: i.fa.fa-envelope
+              .media-content
+                a(href="mailto:contacto@rodayasociados.com.mx") contacto@rodayasociados.com.mx
+              .media-right: a(href="mailto:contacto@rodayasociados.com.mx").is-pulled-right.button.is-small.is-outlined.is-primary: span:icon: i.fas.fa-pen
+            .media
+              .media-left: i.fa.fa-phone
+              .media-content
+                a(href="tel:35476828") +52(55) 3547 - 6828
+              .media-right: a(href="tel:35476828").is-pulled-right.button.is-small.is-outlined.is-primary: span:icon: i.fab.fa-whatsapp
+            hr
+            form.box
+              input(type="hidden" name="_to" value="contacto@rodayasociados.com.mx")
+              input(type="hidden" name="_subject" value="Mensaje de rodayasociados.com.mx")
+              .field.is-horizontal
+                .field-body
+                  .field: .control.is-expanded.has-icons-left
+                    input.input.is-small(type="text" placeholder="Nombre" required name="Nombre")
+                    span.icon.is-small.is-left: i.fas.fa-user
+                  .field: .control.is-expanded.has-icons-left
+                    input.input.is-small(type="email" placeholder="Correo"  required name="_from")
+                    span.icon.is-small.is-left: i.fas.fa-envelope
+              .field: .control.has-icons-left
+                    input.input.is-small(type="text" placeholder="Asunto"  required name="Asunto")
+                    span.icon.is-small.is-left: i.fas.fa-pen
+              .field: .control
+                textarea.textarea.is-small(type="text" placeholder="Mensaje" required name="Mensaje")
+              .field
+                .is-pulled-right: button.button.is-primary(type="submit")
+                  span.icon: i.fas.fa-arrow-right
+                  span Enviar
+            .notification.has-text-centered.is-danger Nos pondremos en contacto lo antes posible.
+
+    
+
+    +footer
+    
+    +scripts

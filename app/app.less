@@ -1,0 +1,320 @@
+@b    : #011829;
+@w    : #fff;
+@g    : #F3F3F3;
+@main: #2F6DA1;
+@sec: #00305B;
+
+
+@tablet:    ~"only screen and (min-width: 769px) and (max-width: 1023px)";
+@mobile:    ~"only screen and (max-width: 768px)";
+
+
+
+.font{
+  font-family: 'Lato', sans-serif;
+}
+.font2{
+  font-family: 'Noticia Text', serif;
+}
+
+body{.font;}
+
+/* SLIDER ----------------------- */
+
+.slider{
+  img{
+    width: 100%;
+  }
+}
+.slick-arrow{
+  position: absolute; top: 50%; z-index: 9;
+  font-size: 0;
+  background: transparent; border: none;
+  color:@w;
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin: -22px 10px 0 10px;
+  cursor: pointer;
+  &:focus{outline: none;}
+  &:after{
+    font: normal normal normal 44px/1 FontAwesome;
+  }
+  &.slick-prev{
+    left: 0;
+    &:after{content:"\f053";}
+  }
+  &.slick-next{
+    right: 0;
+    &:after{content:"\f054";}
+  }
+}
+
+
+
+.v-bottom{
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.v-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title{.font2;}
+
+/* SITE ########################################################## */
+.topbar{
+  background: @b;
+  color:@w;
+  font-size: 0.8rem;
+  padding: 4px 0;
+  a{color:@w;}
+  @media @mobile{
+    display: none;
+  }
+}
+.navbar{
+  padding: 30px 0;
+  background: @w;
+  z-index: 99 !important;
+  @media @mobile{
+    padding: 0;
+  }
+  a{
+    color:@main;
+    font-weight: bold;
+    &.is-active,&:hover { color:@b; background: transparent;}
+  }
+  .navbar-brand{
+    .font2;
+    a{
+      color:@b;
+      span{
+        margin-left: 10px;
+        font-size: 1.4em;
+      }
+    }
+    a.is-active{
+      background: transparent;
+    }
+    a:hover{
+      color:@b;
+    }
+    
+  }
+  .navbar a.is-active{
+    background: transparent;
+  }
+}
+
+
+
+
+#inicio{
+  
+  #soluc{
+    min-height: 800px;
+    .title, .subtitle{color:@w;}
+    .title{
+      @media @mobile{
+        font-size: 1.6em;
+      }
+    }
+    color:@w;
+    background: fade(@sec, 70%);
+    @media @mobile{
+      min-height: 400px;
+    }
+  }
+  h2{
+    background: fade(@b, 80%);
+    color:@w;
+    padding: 20px;
+    width: 60%;
+    font-style: italic;
+    line-height: 1;
+    @media @mobile{
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+
+#soluciones{ 
+  margin-bottom: .75rem;
+  #about{
+    background: @g;
+    padding: 180px 0;
+    @media @mobile{
+      padding: 20px;
+    }
+    .card{
+      background: @b;
+      color:@w;
+      text-align: center;
+      .title{color:@w;}
+    }
+    figure{padding: 10px;}
+  }
+  .column{.v-center; flex-direction: column;}
+  .media{
+    padding: 40px;
+    @media @mobile{
+      padding: 10px;
+      width: 100%;
+
+    }
+    .media-left{
+      color:@main;
+      font-size: 3em;
+      padding: 20px;
+      @media @mobile{
+        font-size: 1em;
+        padding: 5px;
+      }
+    }
+    .media-content{
+      .title{
+        color:@main;
+        font-size: 1.4em;
+        font-weight: bold;
+
+      }
+      ul{
+        list-style: square;
+        list-style-position: inside;
+      }
+    }
+  }
+}
+
+
+#vision{
+  background: @b;
+  padding: 180px 0;
+  @media @mobile{
+    padding: 40px 0;
+  }
+  color:@w;
+  i.fa{font-size: 2em;}
+  .title, p{
+    color:@w;
+  }
+  p{
+    font-size: 1.4em;
+    @media @mobile{
+      font-size: 1.1em;
+      margin: 20px;
+    }
+  }
+}
+
+
+#equipo{
+  background-image: url(img/roday-equipo.jpg);
+  background-size: cover;
+  background-position: top center;
+  padding: 80px 0 120px 0;
+  color:@w;
+  margin-bottom: .75rem;
+  i.fa{font-size: 2em;}
+  .title, p, ul{
+    color:@w;
+  }
+  .box{
+    border: none;
+    border-radius: 0;
+    background: fade(@sec,90%);
+  }
+  p{
+    font-size: 1.2em;
+    @media @mobile{
+      font-size: 1.1em;
+    }
+  }
+  ul{
+    @media @mobile{
+      padding: 0; margin-top: 0;
+    }
+  }
+  .column{
+    @media @mobile{
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+
+#contacto{
+  
+  i.fa{font-size: 2em;}
+  .title, p{
+   
+  }
+  #rodaycontacto{
+    padding: 180px 0;
+    background-image: url(img/roday-contactanos.jpg);
+    background-size: cover;
+    color:@w;
+    line-height: 1;
+    @media @mobile{
+      padding: 40px 0;
+    }
+  }
+
+
+  #rodaycontactus{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media @mobile{
+      padding: 60px 20px;
+    }
+    p, a{color:@b;}
+    a:hover{color:@main;}
+    .is-outlined{border-color: @main;
+      &:hover{color:@w; background: @main;}
+    }
+    .media-left{
+      i{font-size: 1.2em; color:@g/1.2;  }
+    }
+  }
+  form .button.is-primary{
+    background: @main;
+  }
+  .notification{display: none;}
+}
+
+
+
+footer{
+  margin-top: .75rem;
+  background: @b;
+  .title{
+    color:@w;
+    font-size: 1.2em;
+  }
+  p{
+    color:@g*@w;
+    font-size: 0.8em;
+  }
+  a.navbar-item{
+    color:@w;
+    padding: 10px;
+    font-size: 0.8em;
+    &.is-active{
+      color:@main;
+    }
+  }
+  .footer-logo{
+    img{
+      max-width: 40px;
+    }
+  }
+  .goup{
+    color:@w;
+    font-size: 2em;
+  }
+}
